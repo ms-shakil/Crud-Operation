@@ -13,7 +13,7 @@ def insert_data():
     DATA =[]
     with open(JSON_DATA,"r") as fd:
         DATA = json.load(fd)
-        count = int(input("How many Peoples data you want insert:"))
+        count = int(input("How many Players data you want insert:"))
         i = 0
         while i < count:
             people={
