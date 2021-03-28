@@ -19,4 +19,4 @@ def delete_data():
             print("ID ERROR")
         with open(JSON_DATA,"w") as fd:
             json.dump(DATA,fd)
-                
+         

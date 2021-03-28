@@ -4,7 +4,7 @@ from update import update_data,find_indx
 from delete import delete_data,find_indx
 try:
 
-    A = input("What Do you Want:\n(insert,\nupdate,\nshow,\ndelete,)\n\nWrite here:")
+    A = input("What Do you Want:\n(insert:\nupdate:\nshow:\ndelete:)\n\nWrite here:")
 
     if A == "insert":
         insert_data()

@@ -21,7 +21,7 @@ def update_data():
                     data_list.append(j)
             feild =""
             while feild == "":
-                upd =input("What do you want update{}".format(",".join(data_list)))
+                upd =input("What do you want update{}:".format(",".join(data_list)))
                 if upd in data_list:
                     feild = upd
             new_val = input("Enter an value:")   
