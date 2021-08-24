@@ -12,5 +12,5 @@ def show_data():
     with open(JSON_DATA,"r") as fd:
         DATA =json.load(fd)
         id_ = input("Enter an your id:")
-        idx = find_indx(DATA,id_)
-        print(DATA[idx])
+        idx = find_indx(DATA["Information"],id_)
+        print(DATA["Information"][idx])

@@ -14,9 +14,9 @@ def update_data():
         ind = -1
         while ind == -1:
             id_ = input("Enter an your ID:")
-            ind = find_indx(DATA,id_) 
+            ind = find_indx(DATA["Information"],id_) 
             data_list =[]
-            for j in DATA[ind].keys():
+            for j in DATA["Information"][ind].keys():
                 if j != id:
                     data_list.append(j)
             feild =""
@@ -25,7 +25,7 @@ def update_data():
                 if upd in data_list:
                     feild = upd
             new_val = input("Enter an value:")   
-            DATA[ind][feild] = new_val
-            with open(JSON_DATA,"w") as fd:
-                json.dump(DATA,fd)             
+            DATA["Information"][ind][feild] = new_val
+    with open(JSON_DATA,"w") as fd:
+        json.dump(DATA,fd)             
           

@@ -1,5 +1,4 @@
 
-
 def find_indx(list,id):
     found = False
     for i in list:
@@ -15,7 +14,7 @@ def insert_data():
     Phone = re.compile(r"^01[3-9]\d{8}$")
     Gmail = re.compile(r"\w+@\w+\.\w{3,5}$")
     JSON_DATA = "./Players_data.json"
-    DATA =[]
+
     with open(JSON_DATA,"r") as fd:
         DATA = json.load(fd)
         count = int(input("How many Players data you want insert:"))
@@ -24,8 +23,10 @@ def insert_data():
             people={}
             id_ = input("Enter the ID:")
             people["id"] = id_
-            name = input("Enterthe Name::")
+            name = input("Enterthe Name:")
             people["name"]= name
+            coun = input("Enter Country  Name:").upper()
+            people["Country"] = coun
             while True:
                 Ag = input("Enter tha Age:")
                 age_ = Age.search(Ag)
@@ -44,10 +45,29 @@ def insert_data():
                 if gml != None:
                     people["Email"] = gml.group()
                     break
-            if find_indx(DATA,people["id"]):
+            if find_indx(DATA["Information"],people["id"]):
                 print("Data already existes:")
             else:
-                DATA.append(people)
+                DATA["Information"].append(people)
                 i+=1
-                with open (JSON_DATA,"w") as fd:
-                    json.dump(DATA,fd)    
+
+        DATA["Total_player"] = len(DATA["Information"])
+        My_dic ={}
+        My_arr =[]
+        for i in DATA["Information"]:
+            dic = i["Country"]
+            if dic in My_dic:
+                My_dic[dic] +=1
+            else:
+                My_dic[dic] =1
+    
+        for name,count in  My_dic.items():
+            My_arr.append({
+              "name":name,
+              "count":count
+            })
+        DATA["Country"]    = My_arr
+       
+
+    with open (JSON_DATA,"w") as fd:
+        json.dump(DATA,fd)    

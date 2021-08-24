@@ -1,23 +1,64 @@
-[
-  {
-    "id": "11",
-    "name": "shakil",
-    "age": "23",
-    "Phone number": "01634989315",
-    "Email": "shakil12@gmail.com"
-  },
-  {
-    "id": "12",
-    "name": "Mainuddin",
-    "age": "26",
-    "Phone number": "01858087690",
-    "Email": "main74@gmail.com"
-  },
-  {
-    "id": "13",
-    "name": "Sajjad",
-    "age": "26",
-    "Phone number": "01724569850",
-    "Email": "payer232@gmail.com"
-  }
-]
+{
+    "About": "This Json File Store Players Data !",
+    "Total_player": 5,
+    "Country": [
+        {
+            "name": "PORTUGAL",
+            "count": 1
+        },
+        {
+            "name": "ARGENTINA",
+            "count": 1
+        },
+        {
+            "name": "BRAZIL",
+            "count": 2
+        },
+        {
+            "name": "SPAIN",
+            "count": 1
+        }
+    ],
+    "Information": [
+        {
+            "id": "7",
+            "name": "Ronaldo",
+            "Country": "PORTUGAL",
+            "age": "35",
+            "Phone number": "01900000000",
+            "Email": "ronaldo22@gmail.com"
+        },
+        {
+            "id": "10",
+            "name": "Messi",
+            "Country": "ARGENTINA",
+            "age": "34",
+            "Phone number": "01800000000",
+            "Email": "messi10@gmail.com"
+        },
+        {
+            "id": "11",
+            "name": "Neymar Jr",
+            "Country": "BRAZIL",
+            "age": "29",
+            "Phone number": "01700000000",
+            "Email": "neymar11@gmail.com"
+        },
+        {
+            "id": "20",
+            "name": "Kaka",
+            "Country": "BRAZIL",
+            "age": "40",
+            "Phone number": "01400000000",
+            "Email": "kaka20@gmail.com"
+        },
+        {
+            "id": "4",
+            "name": "Sergio Ramos",
+            "Country": "SPAIN",
+            "age": "34",
+            "Phone number": "01600000000",
+            "Email": "ramos4@gmail.com"
+        }
+    ]
+}
